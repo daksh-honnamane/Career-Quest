@@ -1,0 +1,205 @@
+CAREER QUEST PRESENTATION SCRIPT
+
+This version matches the way you actually want to present:
+
+1. Read through the README in a clean order
+2. Transition into a short gameplay showcase
+3. End on either the result screen or the README strengths section
+
+PRESENTATION SETUP
+
+Before time starts, have these ready:
+
+1. README.html open
+2. Career Quest.exe ready to open
+
+Do not interact with judges during setup.
+
+MAIN STRATEGY
+
+Treat the README like your presentation board.
+You are not memorizing a separate speech.
+You are reading and lightly expanding the strongest judge-facing sections of the README, then showing the game.
+
+The goal is to make the judges hear these rubric ideas clearly:
+
+1. prompt match
+2. rules
+3. challenge
+4. multiple outcomes
+5. tools and implementation
+6. visuals and assets
+7. user experience and controls
+8. security and stability
+
+7-MINUTE PLAN
+
+0:00 to 2:45
+Read through the README.
+
+Use this exact section order:
+
+1. Hero / title / project goal
+2. Judge Snapshot
+3. How This Meets The Prompt
+4. Rules And Player Goals
+5. Gameplay Flow
+6. Why The Game Is Challenging
+7. Playable Career Worlds
+8. User Experience And Controls
+9. Tools And Implementation
+10. Project Strengths For Judging
+
+How to read it:
+
+Do not rush, but do not read every bullet with the same emphasis.
+Read the heading, then the strongest sentence or first two bullets, then add one short spoken bridge line.
+
+For the career worlds section, do not read every bullet under every career.
+Read the short description, name one or two example challenges, then move on.
+
+Use these bridge lines while reading:
+
+At the top:
+"This game turns career exploration into something interactive instead of passive."
+
+After Judge Snapshot:
+"So right away, the judges can see the scale of the project and what is playable."
+
+After How This Meets The Prompt:
+"This is the direct connection between the game and the event topic."
+
+After Rules And Player Goals:
+"I wanted the player flow to be easy to understand, with clear goals in every world."
+
+After Gameplay Flow:
+"This gives the game a complete loop from introduction to reflection."
+
+After Why The Game Is Challenging:
+"The game is meant to be understandable, but not automatic. The player still has to think."
+
+After Playable Career Worlds:
+"This is where the creativity shows up, because each profession uses different gameplay."
+
+After User Experience And Controls:
+"I focused on making the experience readable, intuitive, and easy to navigate during a first playthrough."
+
+After Tools And Implementation:
+"This is the technical side of how the game was built and why it runs reliably."
+
+After Project Strengths For Judging:
+"Now I will show the gameplay itself."
+
+Best pacing note:
+
+The README section should feel like a guided overview, not a full script reading.
+If a section is visually clear, summarize part of it instead of reading every line.
+
+2:45 to 5:45
+Do the gameplay showcase.
+
+Best demo choice:
+Software Developer
+
+Exact demo order:
+
+1. Open Career Quest.exe
+2. Click Play
+3. Click through the intro quickly
+4. At the hub, point out the three worlds
+5. Click Software Developer
+6. Pause on the overview screen briefly
+7. Click Start Workday
+8. Click through dialogue efficiently
+9. Complete Bug Hunt
+10. Complete Logic Builder
+11. If time remains, show one more section or reach the results screen
+
+What to say during the demo:
+
+At the hub:
+"The hub keeps the navigation simple and lets the player choose between different career paths."
+
+At the overview:
+"Each world starts by explaining what the job involves and which skills matter in that profession."
+
+At Bug Hunt:
+"This challenge shows the player doing a task that actually fits software development."
+
+At Logic Builder:
+"This adds a different kind of problem-solving so the world does not rely on only one mechanic."
+
+At the results screen:
+"The results screen records performance and reflects the skills shown during the world."
+
+If you do not reach the results screen:
+Say:
+"The world continues through more profession-specific tasks and then ends with a saved report screen that reflects the player performance."
+
+5:45 to 6:30
+Close while still on the game or go back to README strengths.
+
+Say:
+"Career Quest fully addresses the topic by making careers playable through mini-worlds, short scenarios, and profession-specific challenges. It also supports judging requirements through a packaged Windows build, a complete gameplay loop, local save data, and a clear user experience."
+
+6:30 to 7:00
+Final close.
+
+Say:
+"Career Quest helps players understand not just what these jobs are called, but what they feel like, what decisions they involve, and which skills they require. Thank you for your time."
+
+WHAT TO READ MOST CAREFULLY IN THE README
+
+If you need to save time, prioritize these sections:
+
+1. How This Meets The Prompt
+2. Rules And Player Goals
+3. Why The Game Is Challenging
+4. User Experience And Controls
+5. Tools And Implementation
+
+Those sections map most directly to the rubric.
+
+WHAT NOT TO DO
+
+1. Do not read every bullet with the same pace and tone
+2. Do not spend long on How To Run
+3. Do not try to fully show all three worlds
+4. Do not over-explain code unless a judge asks
+5. Do not let the README section take so long that the gameplay feels rushed
+6. Do not read all four bullet groups under every career world
+
+Q AND A SHORT ANSWERS
+
+Question: "How does this meet the prompt?"
+Answer:
+"It uses multiple career mini-worlds, short workday scenarios, and skill-based challenges tied to each profession."
+
+Question: "What are the multiple outcomes?"
+Answer:
+"Players can choose different worlds and earn different skill results based on their performance in the challenges."
+
+Question: "What tools did you use?"
+Answer:
+"I built it in Python using Pygame, with scene management, reusable UI helpers, local save data, and a packaged Windows executable."
+
+Question: "How is the game secure?"
+Answer:
+"It is an offline local game with no accounts or external data collection, and the save data is sanitized before use."
+
+Question: "What did you focus on for UX?"
+Answer:
+"I focused on a clear player journey, large clickable areas, readable layouts, and a resizable interface that keeps the layout usable."
+
+BACKUP PLAN
+
+If the game demo fails:
+
+1. Stay on README.html
+2. Read How This Meets The Prompt
+3. Read Gameplay Flow
+4. Read Playable Career Worlds
+5. Read Tools And Implementation
+6. End on Project Strengths For Judging
+
+That still gives you a clean rubric-based presentation.

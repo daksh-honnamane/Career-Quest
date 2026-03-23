@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Quest README</title>
+    <style>
+        :root {
+            --sage: #9bb682;
+            --cream: #f9e6c5;
+            --paper: #fffaf0;
+            --ink: #2b2b2b;
+            --muted: #5f6656;
+            --panel: #f3eddc;
+            --line: rgba(43, 43, 43, 0.12);
+            --shadow: 0 18px 45px rgba(43, 43, 43, 0.14);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            color: var(--ink);
+            line-height: 1.65;
+            background:
+                radial-gradient(circle at top left, rgba(255, 250, 240, 0.65), transparent 34%),
+                radial-gradient(circle at bottom right, rgba(155, 182, 130, 0.22), transparent 28%),
+                linear-gradient(135deg, #8faa73 0%, #9bb682 25%, #dfe8cb 100%);
+            padding: 32px 20px 56px;
+        }
+
+        .page {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .hero,
+        .section,
+        .footer-card {
+            background: rgba(255, 250, 240, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .hero {
+            padding: 42px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            right: -70px;
+            top: -70px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: rgba(155, 182, 130, 0.18);
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(155, 182, 130, 0.18);
+            color: #4f5f41;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+            color: #415236;
+        }
+
+        h1 {
+            font-size: clamp(2.4rem, 5vw, 4.5rem);
+            line-height: 1.05;
+            margin-top: 18px;
+        }
+
+        h2 {
+            font-size: clamp(1.7rem, 3vw, 2.25rem);
+            margin-bottom: 18px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 0 0 14px;
+            font-size: 1rem;
+        }
+
+        .lead {
+            max-width: 760px;
+            font-size: 1.12rem;
+            color: var(--muted);
+            margin-top: 18px;
+        }
+
+        .hero-grid,
+        .grid-2,
+        .grid-3,
+        .metrics {
+            display: grid;
+            gap: 18px;
+        }
+
+        .hero-grid {
+            grid-template-columns: 2.2fr 1fr;
+            margin-top: 28px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .metrics {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .section {
+            margin-top: 24px;
+            padding: 30px;
+        }
+
+        .card,
+        .metric,
+        .callout,
+        .timeline-step,
+        .career-card,
+        .skill-tag {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+        }
+
+        .card,
+        .career-card,
+        .timeline-step,
+        .callout {
+            padding: 20px;
+        }
+
+        .metric {
+            padding: 18px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(243, 237, 220, 0.95));
+        }
+
+        .metric strong {
+            display: block;
+            font-size: 2rem;
+            color: #3f5131;
+        }
+
+        .metric span {
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .label {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(155, 182, 130, 0.16);
+            color: #4a5b3d;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        ul,
+        ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist li::before {
+            content: "■";
+            color: var(--sage);
+            margin-right: 10px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .skill-tag {
+            padding: 10px 14px;
+            font-size: 0.94rem;
+            background: rgba(155, 182, 130, 0.08);
+        }
+
+        .timeline {
+            display: grid;
+            gap: 14px;
+        }
+
+        .timeline-step {
+            position: relative;
+            padding-left: 64px;
+        }
+
+        .timeline-step .number {
+            position: absolute;
+            left: 18px;
+            top: 18px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--sage);
+            color: #fff;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .career-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(249, 230, 197, 0.72));
+        }
+
+        .career-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .career-card h4 {
+            font-size: 1rem;
+            margin: 16px 0 8px;
+            color: #5a6b4e;
+        }
+
+        .two-column-list {
+            columns: 2;
+            column-gap: 22px;
+        }
+
+        .code-block {
+            font-family: Consolas, "Courier New", monospace;
+            font-size: 0.95rem;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: #f1ecde;
+            border: 1px solid rgba(65, 82, 54, 0.12);
+            overflow-x: auto;
+        }
+
+        .footer-card {
+            margin-top: 24px;
+            padding: 26px 30px;
+            text-align: center;
+        }
+
+        .small {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        a {
+            color: #50623f;
+        }
+
+        @media (max-width: 900px) {
+            .hero,
+            .section,
+            .footer-card {
+                padding: 22px;
+            }
+
+            .hero-grid,
+            .grid-2,
+            .grid-3,
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .two-column-list {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <section class="hero">
+            <span class="eyebrow">Event Presentation README</span>
+            <h1>Career Quest</h1>
+            <p class="lead">
+                Career Quest is an interactive career exploration game that turns career research into playable worlds.
+                Instead of only reading about jobs, players step into a workday, complete career-specific challenges,
+                and leave with a clearer understanding of what each career involves and which skills matter most.
+            </p>
+
+            <div class="hero-grid">
+                <div class="card">
+                    <span class="label">Project Goal</span>
+                    <p>
+                        Give players a hands-on "job tour" through multiple careers using short workplace scenarios,
+                        mini-games, and skill tracking.
+                    </p>
+                    <p>
+                        By the end, players understand the pressure, decisions, priorities, and skills behind each role.
+                    </p>
+                </div>
+                <div class="card">
+                    <span class="label">Quick Facts</span>
+                    <ul class="checklist">
+                        <li>Built in Python with Pygame</li>
+                        <li>Packaged Windows executable included</li>
+                        <li>Three complete playable career worlds</li>
+                        <li>Local save system with skill tracking</li>
+                        <li>Designed around the FBLA Career Quest prompt</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Snapshot</h2>
+            <div class="metrics">
+                <div class="metric">
+                    <strong>3</strong>
+                    <span>Playable career worlds</span>
+                </div>
+                <div class="metric">
+                    <strong>12</strong>
+                    <span>Tracked career skills</span>
+                </div>
+                <div class="metric">
+                    <strong>4+</strong>
+                    <span>Stages per workday challenge flow</span>
+                </div>
+                <div class="metric">
+                    <strong>1</strong>
+                    <span>Packaged Windows executable</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>How This Meets The Prompt</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <span class="label">Prompt Match</span>
+                    <ul>
+                        <li>Players jump into mini-worlds for different careers</li>
+                        <li>Each world begins with a short scenario about the job</li>
+                        <li>Each world includes profession-specific skill challenges</li>
+                        <li>The game teaches what each career involves and which skills matter</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="label">Required Standards</span>
+                    <ul>
+                        <li>Playable on Windows with a packaged executable</li>
+                        <li>Offline local experience with no accounts or outside data collection</li>
+                        <li>Save data is sanitized before use</li>
+                        <li>Complete playable loop from start to results</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>What The Game Includes</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="label">Immersive Structure</span>
+                    <ul>
+                        <li>Opening guided introduction</li>
+                        <li>Main career hub for world selection</li>
+                        <li>Workday-style progression inside each career</li>
+                        <li>Results screen after each completed world</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="label">Interactive Gameplay</span>
+                    <ul>
+                        <li>Dialogue-driven scenarios</li>
+                        <li>Skill-based profession mini-games</li>
+                        <li>Clickable decisions and sequencing challenges</li>
+                        <li>Timed and accuracy-based tasks</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="label">Player Progress</span>
+                    <ul>
+                        <li>Completed careers are saved</li>
+                        <li>Skill ratings are saved for each profession</li>
+                        <li>Career reports stay stored in the save file</li>
+                        <li>Reset data option is available from the hub</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Rules And Player Goals</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <span class="label">Core Rules</span>
+                    <ol>
+                        <li>Start at the title screen and enter the career hub.</li>
+                        <li>Choose one of the three career worlds.</li>
+                        <li>Read the career overview and follow each challenge prompt.</li>
+                        <li>Complete the tasks as accurately and efficiently as possible.</li>
+                        <li>Finish the world and review the final skill report.</li>
+                    </ol>
+                </div>
+                <div class="card">
+                    <span class="label">What Success Looks Like</span>
+                    <ul>
+                        <li>Every world can be completed from start to finish</li>
+                        <li>Each mini-game has a clear goal before interaction begins</li>
+                        <li>Good performance leads to stronger skill ratings</li>
+                        <li>Career choice and performance create different outcomes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Gameplay Flow</h2>
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="number">1</div>
+                    <h3>Startup Introduction</h3>
+                    <p>The game opens with a guided introduction that prepares the player for career exploration.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="number">2</div>
+                    <h3>Career Hub</h3>
+                    <p>Players enter the hub and choose one of three career worlds: Software Developer, Chef, or Doctor.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="number">3</div>
+                    <h3>Career Overview</h3>
+                    <p>Each world begins with an overview of the job and the skills needed in that profession.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="number">4</div>
+                    <h3>Scenario And Challenges</h3>
+                    <p>Players move through dialogue scenes and hands-on mini-games based on realistic responsibilities from that career.</p>
+                </div>
+                <div class="timeline-step">
+                    <div class="number">5</div>
+                    <h3>Results And Reflection</h3>
+                    <p>At the end of a world, the game summarizes performance and records the player's strongest skills.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Why The Game Is Challenging</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <span class="label">Challenge Design</span>
+                    <ul>
+                        <li>Players must interpret instructions, not just click randomly</li>
+                        <li>Tasks require sequencing, prioritization, or careful reading</li>
+                        <li>Some worlds include timed or pressure-based tasks</li>
+                        <li>Each profession tests a different kind of thinking</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="label">Multiple Outcomes</span>
+                    <ul>
+                        <li>Players can choose different career worlds from the hub</li>
+                        <li>Each world records skill ratings based on performance</li>
+                        <li>Completed careers are saved and marked in the hub</li>
+                        <li>Final report screens reflect the skills shown in that world</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Playable Career Worlds</h2>
+            <div class="grid-3">
+                <article class="career-card">
+                    <span class="label">Career World 1</span>
+                    <h3>Software Developer</h3>
+                    <p>
+                        Players step into a software team preparing for launch, where they solve bugs, build logic,
+                        improve efficiency, and work under pressure.
+                    </p>
+                    <h4>Scenario Highlights</h4>
+                    <ul>
+                        <li>Morning standup with team pressure before launch</li>
+                        <li>Feature request discussion with a manager</li>
+                        <li>Performance crisis investigation</li>
+                        <li>Final emergency debugging before a presentation</li>
+                    </ul>
+                    <h4>Mini-Games</h4>
+                    <ul>
+                        <li>Bug Hunt</li>
+                        <li>Logic Builder</li>
+                        <li>Optimization Choice</li>
+                        <li>Pressure Debug</li>
+                    </ul>
+                    <h4>Skills Measured</h4>
+                    <div class="skills">
+                        <div class="skill-tag">Debugging</div>
+                        <div class="skill-tag">Logic</div>
+                        <div class="skill-tag">Efficiency</div>
+                        <div class="skill-tag">Speed</div>
+                    </div>
+                </article>
+
+                <article class="career-card">
+                    <span class="label">Career World 2</span>
+                    <h3>Chef</h3>
+                    <p>
+                        Players work through a restaurant shift, where success depends on prep, timing, plating,
+                        and composure during a rush.
+                    </p>
+                    <h4>Scenario Highlights</h4>
+                    <ul>
+                        <li>Kitchen briefing before lunch service</li>
+                        <li>Order pressure as tables begin to fill</li>
+                        <li>Rush-period plating and inspection</li>
+                        <li>Service sprint during high ticket volume</li>
+                    </ul>
+                    <h4>Mini-Games</h4>
+                    <ul>
+                        <li>Prep Sort</li>
+                        <li>Station Timing</li>
+                        <li>Plating Builder</li>
+                        <li>Service Sprint</li>
+                    </ul>
+                    <h4>Skills Measured</h4>
+                    <div class="skills">
+                        <div class="skill-tag">Timing</div>
+                        <div class="skill-tag">Precision</div>
+                        <div class="skill-tag">Organization</div>
+                        <div class="skill-tag">Composure</div>
+                    </div>
+                </article>
+
+                <article class="career-card">
+                    <span class="label">Career World 3</span>
+                    <h3>Doctor</h3>
+                    <p>
+                        Players move through a medical workday, balancing urgency, diagnosis, care planning, and communication.
+                    </p>
+                    <h4>Scenario Highlights</h4>
+                    <ul>
+                        <li>Waiting-room triage and prioritization</li>
+                        <li>Patient consultation and symptom review</li>
+                        <li>Rounds and treatment planning</li>
+                        <li>Patient-facing communication under pressure</li>
+                    </ul>
+                    <h4>Mini-Games</h4>
+                    <ul>
+                        <li>Triage Board</li>
+                        <li>Diagnosis Rounds</li>
+                        <li>Care Plan Builder</li>
+                        <li>Bedside Manner Challenge</li>
+                    </ul>
+                    <h4>Skills Measured</h4>
+                    <div class="skills">
+                        <div class="skill-tag">Triage</div>
+                        <div class="skill-tag">Diagnosis</div>
+                        <div class="skill-tag">Accuracy</div>
+                        <div class="skill-tag">Empathy</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Game Highlights</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <span class="label">Learning Value</span>
+                    <ul>
+                        <li>Players experience what each career feels like during a workday</li>
+                        <li>Each profession uses distinct challenges instead of repeated mini-games</li>
+                        <li>Results screens reinforce the skills used in each world</li>
+                        <li>The game encourages comparison across very different job paths</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="label">Technical Features</span>
+                    <ul>
+                        <li>Mouse-based controls</li>
+                        <li>Resizable game window</li>
+                        <li>Scaled interface to preserve layout when resized</li>
+                        <li>Persistent save data for careers and skill progress</li>
+                        <li>Click sound feedback for UI interaction</li>
+                        <li>Save data sanitization before use</li>
+                        <li>Packaged Windows executable for use</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>User Experience And Controls</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <span class="label">UX Design Choices</span>
+                    <ul>
+                        <li>Simple player journey from title screen to hub to world to results</li>
+                        <li>Large buttons and consistent panel layouts across scenes</li>
+                        <li>Readable typography and clear text contrast</li>
+                        <li>Results screens provide reflection and clear completion feedback</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="label">Controls And Accessibility Support</span>
+                    <ul>
+                        <li>Mouse-based controls are immediate and easy to understand</li>
+                        <li>Resizable window preserves layout through scaled rendering</li>
+                        <li>Clear visual grouping helps first-time users understand what to do next</li>
+                        <li>Offline play avoids connection barriers if without internet or classroom use</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>How To Run</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <span class="label">After Installation</span>
+                    <ol>
+                        <li>Open the extracted project folder.</li>
+                        <li>Launch <strong>Career Quest.exe</strong>.</li>
+                        <li>Play through the startup scene, enter the hub, and select any career world.</li>
+                    </ol>
+                    <p class="small">This is the simplest way to evaluate the project on Windows.</p>
+                </div>
+                <div class="card">
+                    <span class="label">Run From Source Code</span>
+                    <ol>
+                        <li>Install Python.</li>
+                        <li>Install Pygame with:</li>
+                    </ol>
+                    <div class="code-block">pip install pygame</div>
+                    <ol start="3">
+                        <li>From the project root folder, run:</li>
+                    </ol>
+                    <div class="code-block">python -m source.main</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Tools And Implementation</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <span class="label">Technology Used</span>
+                    <ul>
+                        <li>Python as the programming language</li>
+                        <li>Pygame as the game framework</li>
+                        <li>PyInstaller for the packaged Windows executable</li>
+                        <li>Custom scene management and reusable UI helpers</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <span class="label">Implementation Decisions</span>
+                    <ul>
+                        <li>Each career world uses a staged workday structure</li>
+                        <li>Mini-games mix logic, sequencing, timing, and decision-making</li>
+                        <li>Local JSON save data stores completion, skill ratings, and reports</li>
+                        <li>Atomic save writes and sanitization improve stability</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Overall Project Strengths</h2>
+            <div class="grid-3">
+                <div class="callout">
+                    <h3>Strong Theme Alignment</h3>
+                    <p>The game answers the prompt by making careers playable instead of purely descriptive.</p>
+                </div>
+                <div class="callout">
+                    <h3>Distinct Worlds</h3>
+                    <p>Each profession uses its own scenario structure, tasks, and measured skills.</p>
+                </div>
+                <div class="callout">
+                    <h3>Educational Value</h3>
+                    <p>Players learn the responsibilities, decisions, and skills connected to each job path.</p>
+                </div>
+                <div class="callout">
+                    <h3>Polished Delivery</h3>
+                    <p>The project includes a packaged Windows executable, persistent progress, and a complete play loop.</p>
+                </div>
+                <div class="callout">
+                    <h3>Clear Rules</h3>
+                    <p>The player flow is easy to follow, and each world provides clear prompts before challenges begin.</p>
+                </div>
+                <div class="callout">
+                    <h3>Performance-Based Outcomes</h3>
+                    <p>Career choice, challenge accuracy, and timed performance affect saved skill results and feedback.</p>
+                </div>
+                <div class="callout">
+                    <h3>Readable UX</h3>
+                    <p>The interface uses consistent layouts, large click targets, and resizable rendering to stay easy to follow.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer-card">
+            <h2>Thank You For Reviewing Career Quest</h2>
+            <p>
+                This project was designed to make career exploration interactive, memorable, and educational through gameplay.
+                Thank you for taking the time to judge and experience it.
+            </p>
+            <p class="small">Created by Daksh Honnamane | Career Quest | 2026</p>
+        </section>
+    </div>
+</body>
+</html>
