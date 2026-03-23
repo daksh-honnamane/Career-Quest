@@ -1,0 +1,161 @@
+**7-Minute Plan**
+Use this structure almost exactly.
+
+1. 0:00 to 0:40
+Open with your hook while showing the top of the README.
+
+Say:
+“Hi, I’m Daksh, and this is Career Quest. Career Quest is an interactive career exploration game where players do not just read about jobs, they actually step into mini-worlds and experience what those careers feel like through scenarios and skill-based challenges.”
+
+2. 0:40 to 1:15
+Scroll a little and show the overview / judge snapshot.
+
+Say:
+“The goal of this project was to make career exploration more engaging and educational. Instead of giving players static information, I built three playable career worlds: Software Developer, Chef, and Doctor. Each world includes a short scenario, unique profession-based tasks, and skill tracking.”
+
+3. 1:15 to 1:50
+Show the Gameplay Flow section.
+
+Say:
+“The player starts with an introduction, enters the career hub, selects a world, reads a short overview of that career, completes several challenges, and then gets a result screen that reflects the skills they used. This creates a full loop of exploration, gameplay, and reflection.”
+
+4. 1:50 to 2:40
+Show the Playable Career Worlds section.
+
+Say:
+“Each world is designed differently so the gameplay matches the profession. In Software Developer, players debug code and solve logic problems. In Chef, they manage prep, timing, and plating. In Doctor, they prioritize patients, diagnose cases, and practice bedside communication. This was important to me because I wanted each career to feel distinct rather than just changing the visuals.”
+
+5. 2:40 to 2:50
+Transition into the live demo.
+
+Say:
+“Now I’ll show the game itself and walk through one career world.”
+
+6. 2:50 to 5:50
+Do the live playthrough.
+
+Best choice: play Software Developer.
+Reason: it is easy for judges to follow visually and it clearly shows logic, bugs, and pressure.
+
+Your live demo sequence:
+1. Open `Career Quest.exe`
+2. Click through the intro efficiently
+3. Arrive at the Career Hub
+4. Briefly point out the three worlds
+5. Select Software Developer
+6. Show the overview screen for 5 to 10 seconds
+7. Start the workday
+8. Click through dialogue quickly but not so fast it looks rushed
+9. Complete one or two challenges fully
+10. If time is tight, mention that each world continues in this same structure through multiple profession-specific tasks
+11. Reach the result screen if possible
+12. Return to hub only if you still have time
+
+What to say during demo:
+- At the hub:
+“Here the player can choose between three different careers.”
+- At the overview:
+“This screen explains what the career involves and introduces the main skills.”
+- At the first mini-game:
+“This is where the player is doing a task that reflects actual thinking in that profession.”
+- At results:
+“The game saves completed careers and tracks skill performance, so the player can compare strengths across worlds.”
+
+7. 5:50 to 6:30
+After the playthrough, return to the README or stay on the game results screen.
+
+Say:
+“Beyond gameplay, I also built persistent save data, a resizable interface, scene management for multiple worlds, and a packaged Windows executable so the project is easy to run and evaluate.”
+
+8. 6:30 to 7:00
+Close strongly.
+
+Say:
+“Career Quest turns career exploration into something interactive, memorable, and educational. Players learn what each job involves, which skills matter, and how different careers require different kinds of thinking. Thank you for your time.”
+
+**What To Click During The Event**
+Keep this sequence simple.
+
+1. Start on README.html
+2. Talk through:
+   - title / overview
+   - judge snapshot
+   - gameplay flow
+   - playable career worlds
+3. Launch `Career Quest.exe`
+4. Play one career world
+5. End on either:
+   - the result screen in the game
+   - or the “Project Strengths For Judging” section in the README
+
+**What Not To Do**
+These are the common mistakes.
+
+1. Do not try to show all three career worlds in full
+2. Do not read the README word-for-word
+3. Do not spend too long on setup or run instructions
+4. Do not click too slowly through dialogue
+5. Do not over-explain code unless they ask
+
+**Best Demo Choice**
+Use Software Developer for the live playthrough.
+
+Why:
+1. The concept is easy to understand immediately
+2. Debugging and logic tasks are obvious to judges
+3. It shows problem-solving clearly
+4. It usually presents well in a short demo window
+
+If you want a backup:
+- Chef is your second-best demo because it is visual and fast-paced
+- Doctor is good, but some judges may take a bit longer to process the triage and empathy tasks in a short live window
+
+**3-Minute Q&A Strategy**
+Your Q&A should be short, direct, and confident. Answer in 20 to 30 seconds unless they ask for more.
+
+Likely questions and strong answers:
+
+1. “Why did you choose this idea?”
+Answer:
+“I wanted to make career exploration more interactive. A lot of students hear career names, but they do not really understand what those jobs feel like. I wanted to turn that into a game experience.”
+
+2. “What makes each career world unique?”
+Answer:
+“Each world has its own scenario, tasks, and tracked skills. I did not want one mini-game repeated with different labels. I wanted the gameplay itself to reflect the profession.”
+
+3. “What was the hardest part to build?”
+Answer:
+“Designing each world so it felt different while still fitting into one overall system. I had to balance consistency in navigation with unique gameplay in each profession.”
+
+4. “How does this meet the prompt?”
+Answer:
+“The prompt asked for mini-worlds that showcase careers through short scenarios and skill-based challenges. Career Quest does that directly with three complete worlds, each built around real tasks and skills from that profession.”
+
+5. “How do you store progress?”
+Answer:
+“The game uses a local JSON save system to store completed careers, skill ratings, and career reports.”
+
+6. “How did you make it secure?”
+Answer:
+“It is a local offline game with no online accounts or external data collection. Save data is sanitized before use, which helps prevent broken or invalid save content from causing issues.”
+
+7. “What would you improve next?”
+Answer:
+“I would add more career worlds, deeper branching choices, and more analytics on which skills a player is strongest in across all careers.”
+
+**How To Practice**
+Run this twice before the event.
+
+1. Practice once with no timer
+2. Practice once with a strict 7-minute timer
+3. Mark one exact place where you will stop the demo if time is running short
+4. Practice your opening and closing until they feel automatic
+
+**Simple Backup Plan If Something Goes Wrong**
+If the demo runs into a problem, do this immediately:
+
+1. Go back to the README
+2. Say:
+“I’ve already tested the full playthrough, so I’ll briefly walk through the structure here instead.”
+3. Use the README sections to explain the game flow and career worlds
+4. Keep moving confidently
